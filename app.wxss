@@ -1,4 +1,19 @@
 /**app.wxss**/
+
+.cl-white {
+  color: white;
+}
+.cl-grey {
+  color: grey;
+}
+.cl-blue {
+  color: blue;
+}
+
+.bg-blue {
+  background: blue;
+}
+
 .container {
   height: 100%;
   display: flex;
