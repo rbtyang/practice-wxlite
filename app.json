@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/canvas/canvas",
     "pages/logs/logs"
   ],
   "requiredBackgroundModes": [
@@ -32,6 +33,12 @@
       {
         "pagePath": "pages/logs/logs",
         "text": "日志",
+        "iconPath": "public/images/tab_icon_log.png",
+        "selectedIconPath": "public/images/tab_icon_hover.png"
+      },
+      {
+        "pagePath": "pages/canvas/canvas",
+        "text": "画布",
         "iconPath": "public/images/tab_icon_log.png",
         "selectedIconPath": "public/images/tab_icon_hover.png"
       }
