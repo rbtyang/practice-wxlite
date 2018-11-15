@@ -1,10 +1,24 @@
 //app.js
 App({
   globalData: {
-    userInfo: null
+    userInfo: null,
+    contMoveToc: {
+      start: {},
+      end: {},
+      isLeft: null,
+      isTop: null
+    },
   },
 
   onLaunch: function () {
+    // var a = 10
+    // var b = ~a
+    // console.log(b)
+
+    var a = 10
+    var b = 20
+    console.log((a+b, a-b, a*b, a/b));
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -37,5 +51,25 @@ App({
         }
       }
     })
+  },
+  
+  onContTocStart(event) {
+    console.log(event);
+    this.globalData.contMoveToc.start = event.changedTouches[0]
+  },
+
+  onContTocEnd(event) {
+    console.log(event);
+    this.globalData.contMoveToc.end = event.changedTouches[0]
+
+    this.globalData.contMoveToc.isLeft = this.globalData.contMoveToc.end.clientX < this.globalData.contMoveToc.start.clientX
+    this.globalData.contMoveToc.isTop = this.globalData.contMoveToc.end.clientY < this.globalData.contMoveToc.start.clientY
+
+    wx.switchTab({
+      url: (this.globalData.contMoveToc.isLeft != null && this.globalData.contMoveToc.isLeft) ? '/pages/logs/logs' : '/pages/index/index',
+    })
+
+    console.log(this.globalData.contMoveToc);
   }
+
 })

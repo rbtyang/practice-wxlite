@@ -1,4 +1,10 @@
 /**app.wxss**/
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+} 
 
 .cl-white {
   color: white;
@@ -13,13 +19,3 @@
 .bg-blue {
   background: blue;
 }
-
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
