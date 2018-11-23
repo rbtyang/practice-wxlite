@@ -14,4 +14,8 @@
   <view>
     <button type="default" size="mini" plain="true" bindtap="refreshPage" hover-class="cl-blue"> 刷新 </button>
   </view>
+  <view>
+    <van-button round type="danger">Vant Weapp 圆形按钮</van-button>
+  </view>
+
 </view>

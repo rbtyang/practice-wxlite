@@ -1,2 +1,10 @@
 .idea
+.vscode
+.wing
+.jshintrc
+typings
+
+node_modules
+miniprogram_npm
+
 project.config.json
