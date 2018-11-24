@@ -1,7 +1,7 @@
 #!/bin/bash
 #花果鲜福利社初始化环境文件
 
-echo "install start ..."
+echo "local config start ..."
 
 if [ ! -f "project.config.json" ]; then
     cp project.config.example.json project.config.json
@@ -10,4 +10,4 @@ else
     echo "project.config.json has exist"
 fi
 
-echo "install successfully !"
+echo "local config successfully !"
